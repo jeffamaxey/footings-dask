@@ -91,9 +91,7 @@ source_suffix = {
 def skip(app, what, name, obj, would_skip, options):
     if name == "__call__":
         return False
-    elif name[:1] == "_":
-        return True
-    elif name[:2] == "__":
+    elif name[:1] == "_" or name[:2] == "__":
         return True
     return False
 
